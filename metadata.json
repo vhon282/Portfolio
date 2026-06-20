@@ -1,0 +1,6 @@
+{
+  "name": "April Shyne Palacios Portfolio",
+  "description": "An interactive, premium portfolio and copywriting hub for April Shyne Palacios, Technical Virtual Assistant & IT Specialist. Featuring highly scannable layouts, customizable STAR-framed case studies, and a digital resume export tool.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
