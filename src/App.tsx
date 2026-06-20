@@ -30,9 +30,10 @@ import CaseStudiesView from "./components/CaseStudiesView";
 import MarkdownCopier from "./components/MarkdownCopier";
 import InquiryGenerator from "./components/InquiryGenerator";
 import ShowcaseView from "./components/ShowcaseView";
+import GmailAutomationHub from "./components/GmailAutomationHub";
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<"visual" | "showcase" | "copy" | "inquiry">("visual");
+  const [activeTab, setActiveTab] = useState<"visual" | "showcase" | "gmail" | "copy" | "inquiry">("visual");
   const data = initialPortfolioData;
 
   const handlePrint = () => {
@@ -79,6 +80,18 @@ export default function App() {
             >
               <FolderHeart className="h-3.5 w-3.5 text-rose-500 animate-pulse" />
               <span>Showcase Exhibits</span>
+            </button>
+            <button
+              id="tab-gmail-view"
+              onClick={() => setActiveTab("gmail")}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                activeTab === "gmail"
+                  ? "bg-white text-slate-950 shadow-xs border border-slate-200/50"
+                  : "text-slate-500 hover:text-slate-900"
+              }`}
+            >
+              <Mail className="h-3.5 w-3.5 text-red-500 animate-pulse" />
+              <span>Gmail Automation</span>
             </button>
             <button
               id="tab-copy-view"
@@ -289,6 +302,10 @@ export default function App() {
 
             {activeTab === "showcase" && (
               <ShowcaseView />
+            )}
+
+            {activeTab === "gmail" && (
+              <GmailAutomationHub />
             )}
 
             {activeTab === "copy" && (
