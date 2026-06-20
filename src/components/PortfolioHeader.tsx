@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Mail, Linkedin, MapPin, CheckCircle, ShieldCheck, Clock, Users } from "lucide-react";
 import { PortfolioData } from "../types";
+import avatarImg from '../assets/images/tech_va_avatar_1781914999006.jpg';
 
 interface PortfolioHeaderProps {
   personalInfo: PortfolioData["personalInfo"];
@@ -54,11 +55,10 @@ export default function PortfolioHeader({ personalInfo }: PortfolioHeaderProps) 
           className="relative h-28 w-28 md:h-36 md:w-36 rounded-2xl md:rounded-3xl border-4 border-white overflow-hidden shadow-lg bg-slate-100 flex-shrink-0"
           variants={itemVariants}
         >
-          <img 
-            src="/src/assets/images/tech_va_avatar_1781914999006.jpg" 
-            alt="April Shyne Palacios Profile" 
+          <img
+            src={avatarImg}
+            alt="April Shyne Palacios Profile"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </motion.div>
 
