@@ -82,18 +82,6 @@ export default function App() {
               <span>Showcase Exhibits</span>
             </button>
             <button
-              id="tab-gmail-view"
-              onClick={() => setActiveTab("gmail")}
-              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
-                activeTab === "gmail"
-                  ? "bg-white text-slate-950 shadow-xs border border-slate-200/50"
-                  : "text-slate-500 hover:text-slate-900"
-              }`}
-            >
-              <Mail className="h-3.5 w-3.5 text-red-500 animate-pulse" />
-              <span>Gmail Automation</span>
-            </button>
-            <button
               id="tab-copy-view"
               onClick={() => setActiveTab("copy")}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
