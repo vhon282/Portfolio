@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { Mail, Linkedin, MapPin, CheckCircle, ShieldCheck, Clock, Users } from "lucide-react";
 import { PortfolioData } from "../types";
+import avatarImg from "../assets/images/tech_va_avatar_1781914999006.jpg";
+import bannerImg from "../assets/images/cloud_infra_banner_1781915018851.jpg";
 
 interface PortfolioHeaderProps {
   personalInfo: PortfolioData["personalInfo"];
@@ -34,11 +36,10 @@ export default function PortfolioHeader({ personalInfo }: PortfolioHeaderProps) 
     >
       {/* Visual Tech Background Banner Banner */}
       <div id="header-visual-banner" className="h-44 md:h-56 relative w-full overflow-hidden">
-        <img 
-          src="/src/assets/images/cloud_infra_banner_1781915018851.jpg" 
-          alt="Cloud Infrastructure Banner" 
+        <img
+          src={bannerImg}
+          alt="Cloud Infrastructure Banner"
           className="w-full h-full object-cover blur-[1px] brightness-90 saturate-105"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent" />
         <div className="absolute top-4 right-4 bg-emerald-500/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-md">
@@ -54,11 +55,10 @@ export default function PortfolioHeader({ personalInfo }: PortfolioHeaderProps) 
           className="relative h-28 w-28 md:h-36 md:w-36 rounded-2xl md:rounded-3xl border-4 border-white overflow-hidden shadow-lg bg-slate-100 flex-shrink-0"
           variants={itemVariants}
         >
-          <img 
-            src="/src/assets/images/tech_va_avatar_1781914999006.jpg" 
-            alt="April Shyne Palacios Profile" 
+          <img
+            src={avatarImg}
+            alt="April Shyne Palacios Profile"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </motion.div>
 
